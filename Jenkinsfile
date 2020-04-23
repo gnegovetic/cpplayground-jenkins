@@ -6,7 +6,7 @@ pipeline {
         echo 'Build with cmake'
         sh 'rm -rf build && mkdir build'
         dir('build') {
-          cmake ..
+          sh 'cmake ..'
         } // dir
       }
     } // stage
