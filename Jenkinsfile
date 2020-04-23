@@ -18,4 +18,12 @@ pipeline {
       }
     } 
   } // stages
+  post {
+    success {
+      sh 'mkdir build/output'
+      sh 'cp build/helloWorld build/output/'
+      zip zipFile: 'build.zip', dir: 'build/output'
+      archiveArtifacts artifacts: 'build.zip', fingerprint: true
+    }
+  }
 }
