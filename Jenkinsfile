@@ -1,9 +1,10 @@
 pipeline {
   agent any
   stages {
-    stage('hello') {
+    stage('build') {
       steps {
-        echo 'Hello from Jenkins pipeline'
+        echo 'Build with cmake'
+        mkdir(dir:"build")
       }
     } // stage
   }
