@@ -9,6 +9,11 @@ pipeline {
           sh 'cmake ..'
         } // dir
       }
-    } // stage
+      stage('Build') {
+        dir('build') {
+          sh 'make'
+        }
+      }
+    } // stages
   }
 }
