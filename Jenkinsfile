@@ -4,7 +4,7 @@ pipeline {
     stage('build') {
       steps {
         echo 'Build with cmake'
-        mkdir(dir:"build")
+        sh mkdir build
       }
     } // stage
   }
