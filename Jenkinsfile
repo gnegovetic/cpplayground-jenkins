@@ -10,8 +10,10 @@ pipeline {
         } // dir
       }
       stage('Build') {
-        dir('build') {
-          sh 'make'
+        steps {
+          dir('build') {
+            sh 'make'
+          }
         }
       }
     } // stages
