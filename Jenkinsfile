@@ -9,13 +9,13 @@ pipeline {
           sh 'cmake ..'
         } // dir
       }
-      stage('Build') {
-        steps {
-          dir('build') {
-            sh 'make'
-          }
+    }
+    stage('Build') {
+      steps {
+        dir('build') {
+          sh 'make'
         }
       }
-    } // stages
-  }
+    } 
+  } // stages
 }
