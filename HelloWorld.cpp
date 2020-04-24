@@ -3,7 +3,8 @@ using namespace std;
 
 int main()
 {
-    auto msg = "Hello from master";
+    auto msg = "Hello from master with a change";
+    blah()
     cout << msg << endl;
 
 	return 0;
