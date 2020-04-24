@@ -16,7 +16,14 @@ pipeline {
           sh 'make'
         }
       }
-    } 
+    }
+    stage('Run') {
+      steps {
+        dir('build') {
+          sh './helloWorld'
+        }
+      }
+    }
   } // stages
   post {
     success {
