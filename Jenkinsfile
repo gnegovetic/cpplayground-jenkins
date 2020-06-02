@@ -19,6 +19,7 @@ pipeline {
     }
     stage('Run') {
       steps {
+        echo "Running ${env.JOB_NAME}"
         dir('build') {
           sh './helloWorld'
         }
