@@ -8,7 +8,7 @@ int main(int argc, const char* argv[])
 
     if (argc > 1) 
     {
-        cout << " --- With param." << endl;
+        cout << " --- With param: " << argv[1] << endl;
     }
 
 	return 0;
