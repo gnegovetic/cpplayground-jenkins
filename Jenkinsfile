@@ -21,7 +21,7 @@ pipeline {
       steps {
         echo "Running ${env.JOB_NAME}"
         dir('build') {
-          sh './helloWorld'
+          sh './helloWorld ${env.JOB_NAME}'
         }
       }
     }
