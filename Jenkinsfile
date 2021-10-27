@@ -1,5 +1,5 @@
 pipeline {
-  agent any
+  agent { dockerfile true } // see https://www.jenkins.io/doc/book/pipeline/syntax/#dockerfile
   stages {
     stage('Create make files') {
       steps {
